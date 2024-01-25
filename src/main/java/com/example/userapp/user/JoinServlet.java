@@ -48,9 +48,9 @@ public class JoinServlet extends HttpServlet {
             return;
         }
 
-        resp.sendRedirect("/main");
-//        resp.setStatus(302);
-//        resp.setHeader("Location","/main");
-//        resp.setHeader("clock","12pm");
+        resp.setStatus(302);
+        resp.setHeader("Location","/main");
+        resp.setHeader("clock","12pm");
+//        resp.sendRedirect("/main");
     }
 }

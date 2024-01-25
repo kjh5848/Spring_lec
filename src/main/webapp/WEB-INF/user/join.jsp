@@ -18,8 +18,10 @@
         return;
     }
 
-    //response.sendRedirect("/main");
+//      request.getRequestDispatcher("/WEB-INF/board/Main.jsp").forward(request, response);
+//      response.sendRedirect("/main.do");
         response.setStatus(302);
-        response.setHeader("Location","/board/Main.jsp");
+        response.setHeader("Location","/Main.do");
         response.setHeader("clock","12pm");
+
 %>
