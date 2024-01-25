@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-@WebServlet("/join")
+//@WebServlet("/join")
 public class JoinServlet extends HttpServlet {
 
 
@@ -33,7 +33,6 @@ public class JoinServlet extends HttpServlet {
 //            System.out.println(requestBody);
 //        }
 
-
         // 파싱
         String username = req.getParameter("username");
         String password = req.getParameter("password");
@@ -46,19 +45,9 @@ public class JoinServlet extends HttpServlet {
         //유효성 검사(1000줄됨)
         if (username.length() < 3 || username.length() > 10) {
             resp.getWriter().println("<h1>username의 글자수가 3~10 사이여야 합니다.</h1>");
+            return;
         }
 
-
-        // DB 연결
-
-
-
-        // DAO의 insert 메서드를 호출
-
-
-        // 메인페이지 그리기(비효율적)
-
-        // 리다이렉트 -> 리다이렉션
         resp.sendRedirect("/main");
 //        resp.setStatus(302);
 //        resp.setHeader("Location","/main");
