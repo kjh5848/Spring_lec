@@ -1,8 +1,6 @@
 package shop.mtcoding.conbasic.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HttpMethodController {
@@ -14,6 +12,17 @@ public class HttpMethodController {
 
     @PostMapping("/req/post")
     public String methodPost() {
-
+        return "<h1>post요청<h1>";
     }
+
+    @PutMapping("/req/put")
+    public String methodPut() {
+        return "<h1>put 요청<h1>";
+    }
+
+    @DeleteMapping("/req/delete")
+    public String methodDelete() {
+        return "<h1>delete 요청</h1>";
+    }
+
 }
